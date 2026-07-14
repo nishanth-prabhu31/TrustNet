@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-glass-bg: rgba(30, 41, 59, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-priority-1: #64748B;
+  --color-priority-2: #10B981;
+  --color-priority-3: #EAB308;
+  --color-priority-4: #F97316;
+  --color-priority-5: #EF4444;
+  --color-priority-inherited: #EC4899;
+  --blur-md: 12px;
+}
+body {
+  background-image: radial-gradient(circle at top right, rgba(30, 41, 59, 0.7), transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(15, 23, 42, 1), transparent 50%);
+  background-color: #0f172a;
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.glass-panel {
+  background-color: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.glass-card {
+  background-color: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: background-color 0.2s;
+}
+
+.glass-card:hover {
+  background-color: rgba(30, 41, 59, 0.42);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
